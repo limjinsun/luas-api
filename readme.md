@@ -2,14 +2,6 @@
 
 There were no json friendly api. so I just made it by myself.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
 ```
@@ -59,7 +51,7 @@ you will get following result as Json object.
 
 ## Authors
 
-* **Jin Lim** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Jin Lim** 
 
 ## License
 
