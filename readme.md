@@ -20,7 +20,7 @@ static async convertUrl(url, arg1, arg2) {
 
 ## How to use
 
-localhost:8080/luas/<luas-station-stop-id>
+localhost:8080/luas/[luas-station-stop-id]
 
 for instance, localhost:8080/luas/21
 you will get following result as Json object. 
