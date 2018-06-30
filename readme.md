@@ -10,12 +10,12 @@ npm start
 ```
 
 ! important.
-If you have trouble to deploy in Linux server environment. you need to disable some function from node-js package 'tabletojson'
+If you have trouble to deploy in Linux server environment. You need to disable some function from node-js package 'tabletojson' - and
 anything related to following function 
 ```
 static async convertUrl(url, arg1, arg2) {
 ```
-async keyword making a trouble, but I wouldn't know why and details. this function hasn't been used. so you can 'block comments' it.
+'async' keyword making a trouble, but I wouldn't know why and details. This function hasn't been used. so You can 'block comments' it.
 
 
 ## How to use
