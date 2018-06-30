@@ -9,7 +9,16 @@ npm install
 npm start
 ```
 
-## Example
+! important.
+If you have trouble to deploy in Linux server environment. you need to disable some function from node-js package 'tabletojson'
+anything related to following function 
+```
+static async convertUrl(url, arg1, arg2) {
+```
+async keyword making a trouble, but I wouldn't know why and details. this function hasn't been used. so you can 'block comments' it.
+
+
+## How to use
 
 localhost:8080/luas/<<id nunber of station>>
 
