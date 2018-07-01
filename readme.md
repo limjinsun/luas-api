@@ -56,7 +56,7 @@ you will get following result as Json object.
     "DueTime": "00:15:35"
 }]
 ```
-Following informaition are Luas stop id and station indicating text.
+Following informaition are Luas stop id and station indicating text. from - http://luasforecasts.rpa.ie/analysis/view.aspx?
 
 ```
 stop id - station indicator - station 

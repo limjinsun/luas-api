@@ -14,6 +14,8 @@ router.get('/:id', function (req, res, next) {
     const url = "http://luasforecasts.rpa.ie/analysis/view.aspx?id=" + req.params.id
     fetch(url).then((result) => result.text()).then((html) => {
 
+        console.log(html)
+
         // 'data' is whole html strings. I wanted to extract '<table> part' from HTML strings.
         /**
          *  this wasn't working. 
@@ -32,20 +34,23 @@ router.get('/:id', function (req, res, next) {
 
         // then I found this. -> https://www.npmjs.com/package/tabletojson
 
-        let converted = tabletojson.convert(html);
-        let jsonDatas = []
+        var converted = tabletojson.convert(html);
+        var jsonDatas = []
 
-        jsonDatas = converted[0].map((element) => {
-            let data = {}
-            data.Direction = element.Direction;
-            data.Destination = element.Destination;
-            data.DueTime = element.Time;
-            return data;
-        })
+        if (converted.length > 0) {
+            jsonDatas = converted[0].map((element) => {
+                var data = {}
+                data.Direction = element.Direction;
+                data.Destination = element.Destination;
+                data.DueTime = element.Time;
+                return data;
+            })
+        }
+
         res.json(jsonDatas);
-        
+
         console.log(JSON.stringify(jsonDatas, null, 4));
-    })
+    }).catch((e) => console.log(e))
 })
 
 module.exports = router;
