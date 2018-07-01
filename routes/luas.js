@@ -14,8 +14,6 @@ router.get('/:id', function (req, res, next) {
     const url = "http://luasforecasts.rpa.ie/analysis/view.aspx?id=" + req.params.id
     fetch(url).then((result) => result.text()).then((html) => {
 
-        console.log(html)
-
         // 'data' is whole html strings. I wanted to extract '<table> part' from HTML strings.
         /**
          *  this wasn't working. 
