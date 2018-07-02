@@ -17,7 +17,6 @@ static async convertUrl(url, arg1, arg2) {
 ```
 'async' keyword making a trouble, but I wouldn't know why and details. This function hasn't been used. so You can 'block comments' it.
 
-
 ## How to use
 
 localhost:8080/luas/[luas-station-stop-id]

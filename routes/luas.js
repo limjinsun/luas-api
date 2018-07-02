@@ -9,6 +9,10 @@ router.get('/', function (req, res, next) {
     res.json('Luas Api')
 })
 
+router.get('/dummy', function (req, res, next) {
+    res.json([{ "Direction": "Inbound", "Destination": "Broombridge", "DueTime": "00:08:12" }, { "Direction": "Inbound", "Destination": "Broombridge", "DueTime": "00:19:16" }, { "Direction": "Outbound", "Destination": "Bride's Glen", "DueTime": "00:00:00" }, { "Direction": "Outbound", "Destination": "Bride's Glen", "DueTime": "00:12:22" }])
+})
+
 router.get('/:id', function (req, res, next) {
     // console.log('Request Id:', req.params.id);
     const url = "http://luasforecasts.rpa.ie/analysis/view.aspx?id=" + req.params.id
