@@ -1,6 +1,24 @@
-var app = require('./app');
-var port = 8080;
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+var privateKey  = fs.readFileSync('./ssl/domain.key', 'utf8');
+var certificate = fs.readFileSync('./ssl/domain.crt', 'utf8');
 
-app.listen(port, ()=>{
-    console.log("App is ready!")
+var credentials = {key: privateKey, cert: certificate};
+var app = require('./app');
+
+
+var port = 8080;
+app.set('port', port);
+
+var server = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
+
+
+server.listen(port, () => {
+    console.log("app_runnning");
+});
+
+httpsServer.listen(8443, () => {
+    console.log("https-8443");
 })
