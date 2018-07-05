@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var tabletojson = require('tabletojson');
 
-/* GET home page. */
+/* GET home page. github test */
 
 router.get('/', function (req, res, next) {
     res.json('Luas Api')
